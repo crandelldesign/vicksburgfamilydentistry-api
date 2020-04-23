@@ -165,7 +165,7 @@
                 <!-- Hero Image, Flush : BEGIN -->
                 <tr>
                     <td bgcolor="#555555">
-                        <img src="/img/vicksburg-family-dentistry-logo-email.jpg" width="680" height="172" alt="Vicksburg Family Dentistry" border="0" align="center" class="fluid" style="width: 100%; max-width: 680px; height: auto; background: #555555; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;">
+                        <img src="{{env('APP_URL', 'http://www.vicksburgfamilydentistry.com')}}/img/vicksburg-family-dentistry-logo-email.jpg" width="680" height="172" alt="Vicksburg Family Dentistry" border="0" align="center" class="fluid" style="width: 100%; max-width: 680px; height: auto; background: #555555; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;">
                     </td>
                 </tr>
                 <!-- Hero Image, Flush : END -->
@@ -174,7 +174,7 @@
                     <td bgcolor="#ffffff">
                         <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
                             <tr>
-                                <td style="padding: 40px; text-align: left; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;">
+                                <td style="padding: 40px; text-align: left; font-family: sans-serif; font-size: 15px; color: #636466;">
                                   @yield('content')
                                 </td>
                             </tr>
