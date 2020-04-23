@@ -21,6 +21,6 @@ class ContactThankYou extends Mailable {
  
     //build the message.
     public function build() {
-      return $this->view('emails.contact')->subject('Thank You for Contacting Vicksburg Family Dentistry')->replyTo('vicksburgfamilydentisty@gmail.com', 'Vicksburg Family Dentistry');
+      return $this->view('emails.contact-thank-you')->subject('Thank You for Contacting Vicksburg Family Dentistry')->replyTo('vicksburgfamilydentisty@gmail.com', 'Vicksburg Family Dentistry');
     }
 }
