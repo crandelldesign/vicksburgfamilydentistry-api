@@ -29,8 +29,8 @@ class HomeController extends Controller
             'token' => 'required|captcha'
         ]);
 
-        //Mail::to('vicksburgfamilydentisty@gmail.com')->bcc('matt@crandelldesign.com')->send(new ContactMail($request));
-        Mail::to('matt@crandelldesign.com')->send(new ContactMail($request));
+        Mail::to('vicksburgfamilydentistry@gmail.com>')->bcc('matt@crandelldesign.com')->send(new ContactMail($request));
+        //Mail::to('matt@crandelldesign.com')->send(new ContactMail($request));
         Mail::to($request->get('email'))->send(new ContactThankYou($request));
         return response()->json([
             'success_message' => 'Thank you for contacting us, we will get back to you as soon as possible.'
