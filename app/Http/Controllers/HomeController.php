@@ -29,7 +29,7 @@ class HomeController extends Controller
             'token' => 'required|captcha'
         ]);
 
-        Mail::to('vicksburgfamilydentistry@gmail.com>')->bcc('matt@crandelldesign.com')->send(new ContactMail($request));
+        Mail::to('vicksburgfamilydentistry@gmail.com')->bcc('matt@crandelldesign.com')->send(new ContactMail($request));
         //Mail::to('matt@crandelldesign.com')->send(new ContactMail($request));
         Mail::to($request->get('email'))->send(new ContactThankYou($request));
         return response()->json([
