@@ -32,4 +32,4 @@ jobs:
         host: 64.4.160.12
         password: ${{ secrets.SSH_PASSWORD }}
         port: 7822
-        script: 'cd /var/www/vicksburgfamilydentistry/backend-prod && chmod +x server_deploy.sh && ./server_deploy.sh'
+        script: 'cd /var/www/vicksburgfamilydentistry/api-prod && chmod +x server_deploy.sh && ./server_deploy.sh'
