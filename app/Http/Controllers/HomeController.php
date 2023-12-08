@@ -29,6 +29,11 @@ class HomeController extends Controller
             'token' => 'required|captcha'
         ]);
 
+        // Had to change line 80 on vendor/google/recaptcha/src/ReCaptcha/RequestMethod/Post.php
+        // from
+        // $response = file_get_contents($this->siteVerifyUrl, false, $context);
+        // to
+        // $response = @file_get_contents($this->siteVerifyUrl, false, $context);
         Mail::to('vicksburgfamilydentistry@gmail.com')->bcc('matt@crandelldesign.com')->send(new ContactMail($request));
         //Mail::to('matt@crandelldesign.com')->send(new ContactMail($request));
         Mail::to($request->get('email'))->send(new ContactThankYou($request));
