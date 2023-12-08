@@ -12,6 +12,7 @@
 */
 
 $router->get('/', function () use ($router) {
+    file_get_contents('https://example.com');
     return $router->app->version();
 });
 
