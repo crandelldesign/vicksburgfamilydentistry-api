@@ -12,8 +12,7 @@
 */
 
 $router->get('/', function () use ($router) {
-    return file_get_contents('https://example.com');
-    // return $router->app->version();
+    return $router->app->version();
 });
 
 $router->post('/contact', 'HomeController@submitForm');
